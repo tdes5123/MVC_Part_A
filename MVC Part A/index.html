@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Database</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="https://kit.fontawesome.com/41c8cf9817.js" crossorigin="anonymous"></script>
+    <script src="js/movieDatabaseModel.js" type="text/javascript"></script>
+    <script src="js/movieDatabaseController.js" type="text/javascript"></script>
+</head>
+
+<body class="body-background">
+    <div class="page-layout">
+        <!-- Heading -->
+        <span class="center">
+            <h2 class="movie-db-title center">Movie Database</h2>
+        </span>
+        <!-- Movie List -->
+        <div class="movie-table center">
+            <table class="movie-table" id="mvTable">
+                <tr class="movie-table-header">
+                    <th>Movie Title</th>
+                    <th>Rating</h>
+                    <th>Personal Rating</th>
+                    <th>Blue-ray</th>
+                </tr>
+            </table>
+        </div>
+        <div class="center">
+            <button class="btn btn-blue" type="button" id="mvAddButton">
+                <i class="far fa-edit"></i>Add Movie</button>
+        </div>
+        <!-- Add Movie Form -->
+        <div class="movie-form center" id="mvForm" hidden>
+            <div class="mv-title">
+                Movie Title:
+                <input id="mvTitle">
+                <span class="msg-red" id="titleErr" hidden>Movie title is invalid</span>
+            </div>
+            <div class="mv-dropdown">
+                Movie Rating:
+                <select id="mvRating" name="mvRating">
+                    <option value="G">G</option>
+                    <option value="PG">PG</option>
+                    <option value="PG-13">PG-13</option>
+                    <option value="R">R</option>
+                </select>
+            </div>
+            <div class="mv-year">
+                Year Produced:
+                <input id="mvYear">
+                <span class="msg-red" id="yearErr" hidden>Year produced is invalid</span>
+            </div>
+            <div class="mv-p-rating">
+                Personal Rating:
+                <input id="mvPRating" type="number" min="1" max="5">
+                <span class="msg-red" id="pRatingErr" hidden>Personal rating requires a number between 1 and 5</span>
+            </div>
+
+            <div class="mv-genre">
+                Genre: 
+                <input type="radio" id="mvGenre" name="genre" value="Action/Adventure" checked>
+                <label for="mvGenreAA">Action/Adventure</label>
+    
+                <input type="radio" id="mvGenre" name="genre" value="Drama">
+                <label for="mvGenreD">Drama</label>
+    
+                <input type="radio" id="mvGenre" name="genre" value="Comedy">
+                <label for="mvGenreC">Comedy</label>
+    
+                <input type="radio" id="mvGenre" name="genre" value="Romance">
+                <label for="mvGenreR">Romance</label>
+    
+                <input type="radio" id="mvGenre" name="genre" value="Sci-fi/Fantasy">
+                <label for="mvGenreSc">Sci-fi/Fantasy</label>
+                <span class="msg-red" id="genreErr" hidden>Need to select a genre</span>
+            </div>
+
+            <div class="mv-blue-ray">
+                Blue-ray:
+                <input id="mvBlueRay" type="checkbox" value="true">
+                <span class="msg-red" id="blueRayErr" hidden></span>
+            </div>
+            <div class="button-footer">
+                <button class="btn btn-red" id="mvCancelButton">
+                    Cancel
+                </button>
+                <button class="btn btn-green" id="mvSubmitButton">
+                    Submit
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        onInit();
+    </script>
+</body>
+
+</html>

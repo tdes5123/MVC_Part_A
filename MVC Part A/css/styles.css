@@ -1,0 +1,71 @@
+.page-layout {
+    margin: auto;
+    width: 70%;
+}
+
+.body-background {
+    margin: auto;
+    width: 70%;
+    height: 100%;
+    background-color: rgb(219, 225, 240);
+}
+
+.center {
+    margin: auto;
+    width: 70%;
+}
+
+.movie-db-title {
+    font-size: 50px;
+    color: rgb(1, 1, 138);
+}
+
+.movie-table table {
+    margin: auto;
+    border: 1px solid black; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 27px;
+}
+
+.movie-table-header {
+    margin: auto;
+}
+
+.table-data {
+    border: solid 2px black;
+}
+
+.movie-form {
+    font-size: 24px;
+}
+
+.btn {
+    height: 30px;
+    width: 100px;
+}
+
+.btn-blue {
+    color: white;
+    background-color: blue;
+    border: solid 3px rgb(0, 0, 170);
+    border-radius: 6px;
+}
+
+.btn-green {
+    color: black;
+    background-color: rgb(0, 184, 0);
+    border: solid 3px green; 
+    border-radius: 6px;
+}
+
+.btn-red {
+    color: black;
+    background-color: red;
+    border: solid 3px rgb(187, 0, 0); 
+    border-radius: 6px;
+}
+
+.msg-red {
+    color: red;
+}
